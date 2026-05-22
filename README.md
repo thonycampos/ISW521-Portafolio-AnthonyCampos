@@ -1,0 +1,2 @@
+# ISW521-Portafolio-AnthonyCampos
+ISW-521 — Portafolio de Evidencias  **Estudiante:** Anthony Campos Mora **Carné:** 208540111 **Institución:** UTN – Sede San Carlos **Período:** 2026 – II Cuatrimestre  ## Índice  | Clase | Tema | Actividades | |-------|------|-------------| | 01 | Arquitectura Web, DNS, URLs | ✅ | | 02 | HTTP y el ciclo de la petición | ⏳ |  ## Tecnologías usadas  HTML · CSS · JavaScript · (se irá actualizando)  ## Notas del curso  Este repositorio documenta mi aprendizaje semana a semana.
