@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Anthony Campos</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6f9; color: #2c2c2c; }
+
+  .page { max-width: 860px; margin: 40px auto; background: #fff; box-shadow: 0 4px 24px rgba(0,0,0,0.10); border-radius: 12px; overflow: hidden; }
+
+  /* HEADER */
+  .header { background: #1a3a5c; color: #fff; padding: 48px 48px 36px; display: flex; align-items: center; gap: 32px; }
+  .avatar { width: 90px; height: 90px; border-radius: 50%; background: #2e6da4; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 700; color: #fff; flex-shrink: 0; border: 3px solid rgba(255,255,255,0.25); }
+  .header-info h1 { font-size: 30px; font-weight: 700; letter-spacing: 0.5px; }
+  .header-info .title { font-size: 15px; color: #a8c8e8; margin-top: 4px; font-weight: 400; }
+  .contact-row { display: flex; gap: 24px; margin-top: 14px; flex-wrap: wrap; }
+  .contact-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #cde0f4; }
+  .contact-item svg { width: 15px; height: 15px; fill: none; stroke: #a8c8e8; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+
+  /* BODY */
+  .body { display: grid; grid-template-columns: 260px 1fr; }
+
+  /* SIDEBAR */
+  .sidebar { background: #f0f4f8; padding: 36px 28px; border-right: 1px solid #dde3ea; }
+  .section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #1a3a5c; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 2px solid #2e6da4; }
+
+  /* Skills */
+  .skill-item { margin-bottom: 14px; }
+  .skill-label { font-size: 13px; color: #444; margin-bottom: 5px; display: flex; justify-content: space-between; }
+  .skill-bar { height: 5px; background: #dde3ea; border-radius: 99px; }
+  .skill-fill { height: 5px; border-radius: 99px; background: #2e6da4; }
+
+  /* Tags */
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { background: #dce8f5; color: #1a3a5c; font-size: 12px; padding: 4px 10px; border-radius: 99px; font-weight: 500; }
+
+  .sidebar-section { margin-bottom: 28px; }
+
+  /* MAIN */
+  .main { padding: 36px 40px; }
+  .main-section { margin-bottom: 32px; }
+  .main .section-title { color: #1a3a5c; }
+
+  /* Perfil */
+  .perfil-text { font-size: 14px; color: #555; line-height: 1.75; }
+
+  /* Educación */
+  .edu-item { display: flex; gap: 16px; margin-bottom: 20px; }
+  .edu-dot-col { display: flex; flex-direction: column; align-items: center; }
+  .edu-dot { width: 12px; height: 12px; border-radius: 50%; background: #2e6da4; flex-shrink: 0; margin-top: 4px; }
+  .edu-line { width: 2px; background: #dde3ea; flex: 1; margin-top: 4px; }
+  .edu-content h3 { font-size: 15px; font-weight: 600; color: #1a3a5c; }
+  .edu-content .inst { font-size: 13px; color: #2e6da4; font-weight: 500; margin-top: 2px; }
+  .edu-content .period { font-size: 12px; color: #888; margin-top: 2px; }
+  .edu-content .desc { font-size: 13px; color: #666; margin-top: 6px; line-height: 1.6; }
+
+  /* Logros */
+  .logro-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+  .logro-icon { color: #2e6da4; font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+  .logro-text { font-size: 13px; color: #555; line-height: 1.6; }
+
+  /* Footer */
+  .footer { background: #1a3a5c; color: #a8c8e8; text-align: center; padding: 14px; font-size: 12px; }
+
+  @media print {
+    body { background: #fff; }
+    .page { box-shadow: none; margin: 0; border-radius: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="avatar">AC</div>
+    <div class="header-info">
+      <h1>Anthony Campos</h1>
+      <div class="title">Estudiante de Ingeniería en Software</div>
+      <div class="contact-row">
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.09 5.18 2 2 0 015.07 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 17.92z"/></svg>
+          6169-2545
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          thonycampos2004@gmail.com
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Costa Rica
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+      <div class="sidebar-section">
+        <div class="section-title">Habilidades técnicas</div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Programación</span><span style="color:#2e6da4">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Base de datos</span><span style="color:#2e6da4">65%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Desarrollo web</span><span style="color:#2e6da4">70%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Control de versiones</span><span style="color:#2e6da4">60%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="section-title">Tecnologías</div>
+        <div class="tags">
+          <span class="tag">HTML / CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Python</span>
+          <span class="tag">Java</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Git</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">XAMPP</span>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="section-title">Idiomas</div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Español</span><span style="color:#2e6da4">Nativo</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:100%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Inglés</span><span style="color:#2e6da4">Básico</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:35%"></div></div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="section-title">Habilidades blandas</div>
+        <div class="tags">
+          <span class="tag">Trabajo en equipo</span>
+          <span class="tag">Resolución de problemas</span>
+          <span class="tag">Aprendizaje rápido</span>
+          <span class="tag">Puntualidad</span>
+          <span class="tag">Comunicación</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <div class="main-section">
+        <div class="section-title">Perfil profesional</div>
+        <p class="perfil-text">
+          Estudiante comprometido de Ingeniería en Software en la Universidad Técnica Nacional (UTN), con sólida formación en desarrollo de software, bases de datos y tecnologías web. Apasionado por la tecnología y el desarrollo de soluciones innovadoras, con disposición para aprender y contribuir en entornos de trabajo colaborativos.
+        </p>
+      </div>
+
+      <div class="main-section">
+        <div class="section-title">Educación</div>
+
+        <div class="edu-item">
+          <div class="edu-dot-col">
+            <div class="edu-dot"></div>
+            <div class="edu-line"></div>
+          </div>
+          <div class="edu-content">
+            <h3>Ingeniería en Software</h3>
+            <div class="inst">Universidad Técnica Nacional — UTN</div>
+            <div class="period">En curso · Costa Rica</div>
+            <div class="desc">Carrera enfocada en el diseño, desarrollo y mantenimiento de sistemas de software, abarcando programación, bases de datos, ingeniería de requisitos, arquitectura de software y gestión de proyectos tecnológicos.</div>
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-dot-col">
+            <div class="edu-dot" style="background:#a8c8e8"></div>
+          </div>
+          <div class="edu-content">
+            <h3>Educación secundaria</h3>
+            <div class="inst">Colegio · Costa Rica</div>
+            <div class="period">Completado</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-section">
+        <div class="section-title">Objetivos y logros</div>
+
+        <div class="logro-item">
+          <div class="logro-icon">▸</div>
+          <div class="logro-text">Desarrollar aplicaciones de software eficientes y escalables aplicando buenas prácticas de ingeniería.</div>
+        </div>
+        <div class="logro-item">
+          <div class="logro-icon">▸</div>
+          <div class="logro-text">Profundizar en el desarrollo web full-stack, integrando front-end y back-end con tecnologías modernas.</div>
+        </div>
+        <div class="logro-item">
+          <div class="logro-icon">▸</div>
+          <div class="logro-text">Experiencia práctica con entornos de desarrollo local como XAMPP y configuración de servidores Apache y MySQL.</div>
+        </div>
+        <div class="logro-item">
+          <div class="logro-icon">▸</div>
+          <div class="logro-text">Obtener experiencia profesional en el sector tecnológico mediante prácticas o proyectos colaborativos.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer">Anthony Campos · thonycampos2004@gmail.com · 6169-2545</div>
+</div>
+</body>
+</html>
