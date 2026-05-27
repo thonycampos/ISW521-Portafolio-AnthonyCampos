@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Semántico - Workshop UTN</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; color: #333; }
+
+    /* HEADER */
+    header {
+      background: #1a3a5c;
+      color: white;
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    header .logo {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #a8c8e8;
+    }
+    header nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    header nav a {
+      color: #cde0f4;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    header nav a:hover { color: #fff; }
+
+    /* Formulario de búsqueda */
+    .search-form {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .search-form label {
+      font-size: 13px;
+      color: #a8c8e8;
+    }
+    .search-form input[type="search"] {
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 1px solid #2e6da4;
+      background: #0f2940;
+      color: #fff;
+      font-size: 13px;
+      outline: none;
+      width: 180px;
+    }
+    .search-form input[type="search"]::placeholder { color: #7aacd4; }
+    .search-form input[type="search"]:focus { border-color: #5ba3d9; }
+    .search-form button {
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: none;
+      background: #e87722;
+      color: #fff;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .search-form button:hover { background: #cf6010; }
+
+    /* LAYOUT PRINCIPAL */
+    .wrapper {
+      display: grid;
+      grid-template-columns: 200px 1fr 200px;
+      grid-template-rows: auto;
+      gap: 0;
+      min-height: calc(100vh - 130px);
+    }
+
+    /* ASIDE IZQUIERDO - Filters */
+    aside.filters {
+      background: #2e6da4;
+      color: #fff;
+      padding: 28px 20px;
+    }
+    aside.filters h2 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #cde0f4;
+      margin-bottom: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 8px;
+    }
+    .filter-group { margin-bottom: 20px; }
+    .filter-group h3 { font-size: 12px; color: #a8c8e8; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .filter-group label { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #dce8f5; margin-bottom: 6px; cursor: pointer; }
+    .filter-group input[type="checkbox"] { accent-color: #e87722; }
+    .filter-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 99px;
+      margin: 3px 2px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .filter-tag:hover { background: rgba(255,255,255,0.25); }
+
+    /* MAIN */
+    main {
+      background: #4a90c4;
+      padding: 32px 36px;
+      color: #fff;
+    }
+    main h1 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    main p.intro {
+      font-size: 14px;
+      color: #dce8f5;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    /* Articles dentro de main */
+    article {
+      background: rgba(255,255,255,0.15);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 18px;
+      border-left: 4px solid #e87722;
+    }
+    article h1 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    article p {
+      font-size: 13px;
+      color: #dce8f5;
+      line-height: 1.65;
+    }
+    article .meta {
+      font-size: 11px;
+      color: #a8c8e8;
+      margin-top: 10px;
+    }
+
+    /* ASIDE DERECHO - Related */
+    aside.related {
+      background: #e87722;
+      color: #fff;
+      padding: 28px 20px;
+    }
+    aside.related h2 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #fff3e8;
+      margin-bottom: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      padding-bottom: 8px;
+    }
+    .related-item {
+      background: rgba(255,255,255,0.15);
+      border-radius: 6px;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .related-item:hover { background: rgba(255,255,255,0.25); }
+    .related-item h3 { font-size: 13px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .related-item p { font-size: 11px; color: #ffe0c4; }
+
+    /* FOOTER */
+    footer {
+      background: #1a3a5c;
+      color: #a8c8e8;
+      text-align: center;
+      padding: 16px 32px;
+      font-size: 13px;
+    }
+    footer span { color: #cde0f4; font-weight: 500; }
+
+    /* Etiquetas semánticas visibles (decorativas) */
+    .tag-label {
+      display: inline-block;
+      font-size: 10px;
+      font-family: monospace;
+      background: rgba(0,0,0,0.2);
+      color: rgba(255,255,255,0.7);
+      padding: 2px 7px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 700px) {
+      .wrapper { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER: logo + nav + búsqueda -->
+  <header>
+    <div class="logo">UTN &nbsp;·&nbsp; HTML Semántico</div>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Cursos</a>
+      <a href="#">Blog</a>
+      <a href="#">Contacto</a>
+      <form class="search-form" role="search">
+        <label for="busqueda">Buscar:</label>
+        <input type="search" id="busqueda" name="q" placeholder="Buscar contenido...">
+        <button type="submit">Buscar</button>
+      </form>
+    </nav>
+  </header>
+
+  <!-- LAYOUT: aside + main + aside -->
+  <div class="wrapper">
+
+    <!-- ASIDE IZQUIERDO: Filters -->
+    <aside class="filters">
+      <span class="tag-label">&lt;aside&gt; Filters</span>
+      <h2>Filtros</h2>
+
+      <div class="filter-group">
+        <h3>Categoría</h3>
+        <label><input type="checkbox"> HTML5</label>
+        <label><input type="checkbox"> CSS3</label>
+        <label><input type="checkbox"> JavaScript</label>
+        <label><input type="checkbox"> Semántica</label>
+      </div>
+
+      <div class="filter-group">
+        <h3>Nivel</h3>
+        <span class="filter-tag">Básico</span>
+        <span class="filter-tag">Intermedio</span>
+        <span class="filter-tag">Avanzado</span>
+      </div>
+
+      <div class="filter-group">
+        <h3>Año</h3>
+        <label><input type="checkbox"> 2024</label>
+        <label><input type="checkbox"> 2025</label>
+        <label><input type="checkbox"> 2026</label>
+      </div>
+    </aside>
+
+    <!-- MAIN: article + h1 + p -->
+    <main>
+      <span class="tag-label">&lt;main&gt; &lt;article&gt; &lt;h1&gt; &lt;p&gt;</span>
+      <h1>Workshop · HTML Semántico</h1>
+      <p class="intro">
+        En este workshop aprenderemos a estructurar páginas web usando exclusivamente etiquetas semánticas de HTML5, mejorando la accesibilidad, el SEO y la legibilidad del código.
+      </p>
+
+      <article>
+        <h1>¿Qué es el HTML Semántico?</h1>
+        <p>El HTML semántico utiliza etiquetas que describen el significado del contenido, no solo su apariencia. Etiquetas como <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code> y <code>&lt;footer&gt;</code> comunican la estructura al navegador y a los lectores de pantalla.</p>
+        <div class="meta">📅 UTN · 2026 · Workshop #1</div>
+      </article>
+
+      <article>
+        <h1>Ventajas del marcado semántico</h1>
+        <p>Mejora el posicionamiento SEO, facilita la accesibilidad para personas con discapacidad visual y hace que el código sea más fácil de mantener y entender por otros desarrolladores.</p>
+        <div class="meta">📅 UTN · 2026 · Workshop #1</div>
+      </article>
+
+      <article>
+        <h1>Formulario semántico con &lt;label&gt; e &lt;input&gt;</h1>
+        <p>Un formulario accesible siempre asocia cada <code>&lt;input&gt;</code> con un <code>&lt;label&gt;</code> usando el atributo <code>for</code>. El tipo <code>input[type="search"]</code> indica semánticamente que el campo es de búsqueda.</p>
+        <div class="meta">📅 UTN · 2026 · Workshop #1</div>
+      </article>
+    </main>
+
+    <!-- ASIDE DERECHO: Related -->
+    <aside class="related">
+      <span class="tag-label">&lt;aside&gt; Related</span>
+      <h2>Relacionado</h2>
+
+      <div class="related-item">
+        <h3>CSS Semántico</h3>
+        <p>BEM, variables CSS y buenas prácticas</p>
+      </div>
+      <div class="related-item">
+        <h3>Accesibilidad Web</h3>
+        <p>ARIA roles y atributos alt</p>
+      </div>
+      <div class="related-item">
+        <h3>SEO Técnico</h3>
+        <p>Estructurar contenido para buscadores</p>
+      </div>
+      <div class="related-item">
+        <h3>HTML5 Forms</h3>
+        <p>Inputs semánticos y validación nativa</p>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>&copy; UTN 2026</span> &nbsp;·&nbsp; Workshop: HTML Semántico &nbsp;·&nbsp; Anthony Campos
+  </footer>
+
+</body>
+</html>
