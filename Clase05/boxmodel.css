@@ -1,0 +1,70 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+ 
+
+div.tarjeta {
+  width: 500px;
+  margin: 16px;
+  border: 2px solid #cccccc;
+  padding: 20px;
+  background-color: white;
+}
+ 
+
+div.encabezado {
+  background-color: #1a2e5a;
+  padding: 18px;
+  margin-top: -20px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+ 
+
+div.encabezado h2 {
+  color: white;
+  font-size: 26px;
+}
+ 
+
+div.linea-naranja {
+  height: 5px;
+  background-color: #e8820c;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+ 
+
+p.nombre-curso {
+  color: #1a2e5a;
+  font-weight: bold;
+  font-size: 14px;
+}
+ 
+
+p.descripcion {
+  color: #444444;
+  font-size: 13px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+ 
+
+button.boton-ver-curso {
+  width: 100%;
+  padding: 12px;
+  background-color: #1a2e5a;
+  color: #e8820c;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+ 
+
+button.boton-ver-curso:hover {
+  background-color: #253f7a;
+}
+ 
