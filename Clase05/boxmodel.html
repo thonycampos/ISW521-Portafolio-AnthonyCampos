@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi tarjeta</title>
+ 
+  <style>
+    /* Estilos para el body (fondo de la pagina) */
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+ 
+    /* La tarjeta principal */
+    div.tarjeta {
+      width: 500px;
+      margin: 16px;
+      border: 2px solid #cccccc;
+      padding: 20px;
+      background-color: white;
+    }
+ 
+    /* La parte azul de arriba con el codigo ISW-521 */
+    div.encabezado {
+      background-color: #1a2e5a;
+      padding: 18px;
+      margin-top: -20px;
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+ 
+    /* El texto ISW-521 */
+    div.encabezado h2 {
+      color: white;
+      font-size: 26px;
+    }
+ 
+    
+    div.linea-naranja {
+      height: 5px;
+      background-color: #e8820c;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+ 
+    
+    p.nombre-curso {
+      color: #1a2e5a;
+      font-weight: bold;
+      font-size: 14px;
+    }
+ 
+    
+    p.descripcion {
+      color: #444444;
+      font-size: 13px;
+      margin-top: 8px;
+      margin-bottom: 20px;
+    }
+ 
+    
+    button.boton-ver-curso {
+      width: 100%;
+      padding: 12px;
+      background-color: #1a2e5a;
+      color: #e8820c;
+      font-size: 14px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+ 
+    /* Cuando pasas el mouse por encima del boton */
+    button.boton-ver-curso:hover {
+      background-color: #253f7a;
+    }
+  </style>
+ 
+</head>
+<body>
+ 
+  <!-- La tarjeta -->
+  <div class="tarjeta">
+ 
+    <!-- Encabezado azul con el codigo del curso -->
+    <div class="encabezado">
+      <h2>ISW-521</h2>
+    </div>
+ 
+    <!-- Linea naranja decorativa -->
+    <div class="linea-naranja"></div>
+ 
+    <!-- Nombre del curso -->
+    <p class="nombre-curso">Programación en Ambiente Web I</p>
+ 
+    <!-- Descripcion del curso -->
+    <p class="descripcion">Aprende a construir aplicaciones web modernas con HTML, CSS y JavaScript.</p>
+ 
+    <!-- Boton -->
+    <button class="boton-ver-curso">Ver curso →</button>
+ 
+  </div>
+ 
+</body>
+</html>
