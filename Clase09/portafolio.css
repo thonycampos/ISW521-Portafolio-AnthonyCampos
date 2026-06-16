@@ -1,0 +1,345 @@
+/* ================================
+   ESTILOS BASE (aplican a todo)
+   ================================ */
+
+/* Reseteo basico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fuente y color de fondo general */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* ================================
+   ENCABEZADO Y NAVEGACION
+   ================================ */
+
+.encabezado {
+  background-color: #1a2e5a;
+  padding: 16px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo o nombre en el nav */
+.nav-logo {
+  color: #e8820c;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Lista de enlaces del nav */
+.nav-lista {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-lista a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.nav-lista a:hover {
+  color: #e8820c;
+}
+
+/* ================================
+   SECCION: SOBRE MI / PERFIL
+   ================================ */
+
+.seccion-perfil {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 32px;
+  background-color: white;
+  max-width: 1100px;
+  margin: 40px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen de perfil redonda */
+.perfil-imagen img {
+  border-radius: 50%;
+  border: 4px solid #e8820c;
+  display: block;
+}
+
+/* Nombre del estudiante */
+.perfil-info h1 {
+  font-size: 36px;
+  color: #1a2e5a;
+  margin-bottom: 6px;
+}
+
+/* Cargo o rol */
+.perfil-cargo {
+  color: #e8820c;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+/* Descripcion personal */
+.perfil-descripcion {
+  font-size: 15px;
+  color: #555555;
+  max-width: 500px;
+}
+
+/* ================================
+   SECCION: PROYECTOS
+   ================================ */
+
+.seccion-proyectos {
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+  padding: 0 32px;
+}
+
+/* Titulo de cada seccion */
+.titulo-seccion {
+  font-size: 28px;
+  color: #1a2e5a;
+  margin-bottom: 24px;
+  border-left: 5px solid #e8820c;
+  padding-left: 12px;
+}
+
+/* Grid de proyectos - pantallas grandes: 3 columnas */
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Cada tarjeta de proyecto */
+.tarjeta-proyecto {
+  background-color: white;
+  border: 2px solid #dddddd;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.2s;
+}
+
+.tarjeta-proyecto:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Icono del proyecto */
+.proyecto-icono {
+  font-size: 32px;
+}
+
+/* Titulo del proyecto */
+.tarjeta-proyecto h3 {
+  font-size: 18px;
+  color: #1a2e5a;
+}
+
+/* Descripcion del proyecto */
+.tarjeta-proyecto p {
+  font-size: 14px;
+  color: #555555;
+  flex-grow: 1;
+}
+
+/* Boton de ver proyecto */
+.boton-proyecto {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 16px;
+  background-color: #1a2e5a;
+  color: #e8820c;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.boton-proyecto:hover {
+  background-color: #253f7a;
+}
+
+/* ================================
+   SECCION: CONTACTO
+   ================================ */
+
+.seccion-contacto {
+  background-color: #1a2e5a;
+  color: white;
+  text-align: center;
+  padding: 60px 32px;
+}
+
+.seccion-contacto .titulo-seccion {
+  color: white;
+  border-left-color: #e8820c;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.seccion-contacto p {
+  font-size: 16px;
+  margin-bottom: 24px;
+  color: #cccccc;
+}
+
+/* Boton de contacto */
+.boton-contacto {
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: #e8820c;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.boton-contacto:hover {
+  background-color: #c96f08;
+}
+
+/* ================================
+   PIE DE PAGINA
+   ================================ */
+
+.pie-pagina {
+  background-color: #111c35;
+  color: #aaaaaa;
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+}
+
+/* ================================
+   MEDIA QUERY: PANTALLAS MEDIANAS
+   Entre 600px y 1024px → 2 columnas
+   ================================ */
+
+@media (max-width: 1024px) {
+
+  /* Proyectos en 2 columnas */
+  .grid-proyectos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Perfil: imagen arriba, texto abajo */
+  .seccion-perfil {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 24px;
+  }
+
+  .perfil-descripcion {
+    max-width: 100%;
+  }
+
+  .perfil-info h1 {
+    font-size: 30px;
+  }
+
+}
+
+/* ================================
+   MEDIA QUERY: PANTALLAS PEQUEÑAS
+   Menos de 600px → 1 columna
+   ================================ */
+
+@media (max-width: 600px) {
+
+  /* Navegacion vertical */
+  .navegacion {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .nav-lista {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-lista a {
+    font-size: 14px;
+  }
+
+  /* Proyectos en 1 columna */
+  .grid-proyectos {
+    grid-template-columns: 1fr;
+  }
+
+  /* Perfil ajustado */
+  .seccion-perfil {
+    padding: 30px 16px;
+    margin: 20px 16px;
+  }
+
+  .perfil-imagen img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .perfil-info h1 {
+    font-size: 24px;
+  }
+
+  .perfil-cargo {
+    font-size: 14px;
+  }
+
+  .perfil-descripcion {
+    font-size: 13px;
+  }
+
+  /* Secciones con menos padding */
+  .seccion-proyectos {
+    padding: 0 16px;
+  }
+
+  .titulo-seccion {
+    font-size: 22px;
+  }
+
+  .tarjeta-proyecto {
+    padding: 18px;
+  }
+
+  .tarjeta-proyecto h3 {
+    font-size: 16px;
+  }
+
+  /* Contacto */
+  .seccion-contacto {
+    padding: 40px 16px;
+  }
+
+  .boton-contacto {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+
+}
