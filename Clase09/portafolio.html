@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="portafolio.css">
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO ===== -->
+  <header class="encabezado" role="banner">
+    <nav class="navegacion" role="navigation" aria-label="Menú principal">
+      <span class="nav-logo">Mi Portafolio</span>
+      <ul class="nav-lista">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== SECCION: SOBRE MI ===== -->
+  <section id="sobre-mi" class="seccion-perfil" aria-label="Sobre mí">
+    <div class="perfil-imagen">
+      <!-- Imagen de perfil placeholder -->
+      <img
+        src="https://placehold.co/180x180/1a2e5a/ffffff?text=Foto"
+        alt="Foto de perfil de Anthony"
+        width="180"
+        height="180"
+      >
+    </div>
+    <div class="perfil-info">
+      <h1>Anthony</h1>
+      <p class="perfil-cargo">Estudiante de Programación Web</p>
+      <p class="perfil-descripcion">
+        Hola! Soy estudiante de ISW-521 Programación en Ambiente Web I.
+        Me apasiona crear sitios web modernos y aprender nuevas tecnologías.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== SECCION: PROYECTOS ===== -->
+  <section id="proyectos" class="seccion-proyectos" aria-label="Proyectos">
+    <h2 class="titulo-seccion">Mis Proyectos</h2>
+
+    <div class="grid-proyectos">
+
+      <!-- Proyecto 1 -->
+      <article class="tarjeta-proyecto" aria-label="Proyecto 1">
+        <div class="proyecto-icono" aria-hidden="true">🌐</div>
+        <h3>Página Web Personal</h3>
+        <p>Sitio web creado con HTML y CSS puro. Incluye secciones de inicio, sobre mí y contacto.</p>
+        <a href="#" class="boton-proyecto" aria-label="Ver proyecto Página Web Personal">Ver proyecto →</a>
+      </article>
+
+      <!-- Proyecto 2 -->
+      <article class="tarjeta-proyecto" aria-label="Proyecto 2">
+        <div class="proyecto-icono" aria-hidden="true">🧮</div>
+        <h3>Calculadora en JavaScript</h3>
+        <p>Calculadora funcional con operaciones básicas, diseñada con CSS Grid y lógica en JavaScript.</p>
+        <a href="#" class="boton-proyecto" aria-label="Ver proyecto Calculadora en JavaScript">Ver proyecto →</a>
+      </article>
+
+      <!-- Proyecto 3 -->
+      <article class="tarjeta-proyecto" aria-label="Proyecto 3">
+        <div class="proyecto-icono" aria-hidden="true">📋</div>
+        <h3>Lista de Tareas</h3>
+        <p>Aplicación para agregar, completar y eliminar tareas. Usa almacenamiento local del navegador.</p>
+        <a href="#" class="boton-proyecto" aria-label="Ver proyecto Lista de Tareas">Ver proyecto →</a>
+      </article>
+
+      <!-- Proyecto 4 -->
+      <article class="tarjeta-proyecto" aria-label="Proyecto 4">
+        <div class="proyecto-icono" aria-hidden="true">🎨</div>
+        <h3>Box Model Workshop</h3>
+        <p>Ejercicio práctico del modelo de caja en CSS, con tarjetas responsivas y paleta de colores personalizada.</p>
+        <a href="#" class="boton-proyecto" aria-label="Ver proyecto Box Model Workshop">Ver proyecto →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== SECCION: CONTACTO ===== -->
+  <section id="contacto" class="seccion-contacto" aria-label="Contacto">
+    <h2 class="titulo-seccion">Contacto</h2>
+    <p>¿Tienes algún proyecto en mente? ¡Hablemos!</p>
+    <a href="mailto:estudiante@correo.com" class="boton-contacto" aria-label="Enviar correo a estudiante@correo.com">
+      ✉️ Escribirme
+    </a>
+  </section>
+
+  <!-- ===== PIE DE PAGINA ===== -->
+  <footer class="pie-pagina" role="contentinfo">
+    <p>© 2025 Anthony — ISW-521 Programación en Ambiente Web I</p>
+  </footer>
+
+</body>
+</html>
